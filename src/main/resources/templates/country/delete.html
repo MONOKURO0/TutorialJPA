@@ -5,14 +5,13 @@
     <title>Tutorial of JPA</title>
 </head>
 <body>
-    <h1>Country 削除</h1>
-    <p>削除する国のコードを指定してください。</p>
+    <h1 th:text="#{content.delete.title}"></h1>
+    <p th:text="#{content.delete.message}"></p>
+
     <form method="post" action="/country/delete">
         <input type="text" name="code" th:value="${code}">
-        <button type="submit">送信</button>
-
-        <a th:href="@{/country/list}">一覧に戻る</a>
-
+        <button type="submit" th:text="#{content.button}"></button>
+        <a th:href="@{/country/list}" th:text="#{content.link.home}"></a>
     </form>
 </body>
 </html>
